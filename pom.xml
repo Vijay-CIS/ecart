@@ -19,6 +19,18 @@
 		  <sonar.coverage.jacoco.xmlReportPaths>
     ../app-it/target/site/jacoco-aggregate/jacoco.xml
   </sonar.coverage.jacoco.xmlReportPaths>
+  	<jacoco.version>0.8.8</jacoco.version>
+		<sonar.exclusions>
+**/com/demo/ecart/dto/**,
+**/com/demo/ecart/entity/**,
+**/com/demo/ecart/exception/**,
+**/com/demo/ecart/repository/**,
+**/com/demo/ecart/utils/**,
+**/com/demo/ecart/securityconfig/**,
+**/com/demo/ecart/kafka/**,
+**/EcartApplication.java
+
+</sonar.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -59,6 +71,11 @@
 			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
 			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
